@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@android:drawable/dialog_holo_light_frame">
+
+    <ImageView android:id="@+id/image"
+        android:layout_width="@dimen/list_height"
+        android:layout_height="@dimen/list_height"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp" >
+
+        <TextView android:id="@+id/place_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_alignParentTop="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:textColor="#070D0D"
+            tools:text="@string/sites_name_church" />
+
+        <RatingBar
+            android:id="@+id/place_ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            style="?android:attr/ratingBarStyleSmall"/>
+
+        <TextView android:id="@+id/place_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/place_name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textStyle="italic"
+            android:textColor="#585858"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="@string/sites_description_church"/>
+
+        <TextView android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            android:textColor="#070D0D"
+            android:text="@string/card_price" />
+
+        <TextView android:id="@+id/place_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/place_ratingBar"
+            android:layout_toRightOf="@id/price"
+            android:layout_marginLeft="4dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#070D0D"
+            tools:text="@string/price_free" />
+    </RelativeLayout>
+</LinearLayout>
